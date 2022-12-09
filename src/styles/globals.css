@@ -1,5 +1,5 @@
 html {
-  background-color: hsl(202deg 73% 26%);
+  background-color: #0f0f23;
   color: white;
 }
 
@@ -10,23 +10,42 @@ body {
   max-width: 800px;
 }
 
+h1 {
+  color: #00cc00;
+  text-shadow: 0 0 2px #00cc00, 0 0 5px #00cc00;
+}
+
 th {
   text-align: left;
 }
 
+#years li,
 a {
-  color: inherit;
+  color: #009900;
   text-decoration: none;
+}
+a:hover,
+a:focus,
+#years li.active a {
+  color: #99ff99;
 }
 
 * {
   box-sizing: border-box;
 }
 
+.titel {
+  color: #ffff66
+}
+
 table {
   width: 100%;
   padding-bottom: 20px;
   cursor: default;
+}
+
+thead tr th {
+  color: #00cc00;
 }
 
 tbody tr:hover td {
@@ -43,16 +62,13 @@ ul#years li {
   display: block;
 }
 
-ul#years li.active {
-  border-bottom: 2px solid white;
+ul#years li:before {
+  content: "["
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+ul#years li:after {
+  content: "]"
+}
+ul#years li.active:before,
+ul#years li.active:after {
+  color: #99ff99;
 }

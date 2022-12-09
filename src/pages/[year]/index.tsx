@@ -19,7 +19,7 @@ export default function Page({leaderboard, year}) {
 
         { reports.map(report => (
             <div key={report.title}>
-              {report.title}
+              <span className="titel">{report.title}</span>
               <table>
               <thead>
                   <tr>
